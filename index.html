@@ -8,13 +8,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="shortcut icon" href="./_media/icon.svg" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+  <style>
+    .markmap {
+      width: 100%;
+      height: 500px;
+    }
+
+    .sidebar-nav div a {
+      width: 100%;
+      border: 0;
+      padding: 0;
+    }
+
+    .sidebar-nav div a img {
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
   <div id="app">加载中</div>
   <script>
     window.$docsify = {
       name: '开发教程集合',
-      logo: '/_media/icon.svg',
+      // logo: '/_media/icon.svg',
       repo: 'https://github.com/OSpoon',
       // 侧边栏
       loadSidebar: true,
@@ -31,6 +47,17 @@
       coverpage: true,
       // 回到顶部
       auto2top: true,
+      timeUpdater: {
+        text: ">最后更新时间: {docsify-updated}",
+        formatUpdated: "{YYYY} / {MM} / {DD}",
+        whereToPlace: "top",
+      },
+      ads: [
+        // {
+        //   img: 'https://dn-lego-static.qbox.me/cps/1638355799-480300.jpg',
+        //   href: 'https://s.qiniu.com/7nM3uy'
+        // },
+      ],
     }
   </script>
   <!-- Docsify v4 -->
@@ -38,6 +65,10 @@
   <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
+  <script src="//unpkg.com/docsify-ads@1.0.4/dist/docsify-ads.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/markmap-autoloader@0.15.2"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-markmap.js@1.0.0/docsify-markmap.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-typescript.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
