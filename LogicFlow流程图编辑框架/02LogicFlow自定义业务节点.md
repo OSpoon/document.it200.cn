@@ -170,10 +170,8 @@ const graphData = {
 }
 ```
 
-![自定义业务节点渲染图](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6309be40bfcf43eaa629f37a4e2711a7~tplv-k3u1fbpfcp-zoom-1.image)
+![自定义业务节点渲染图](https://picgo-2022.oss-cn-beijing.aliyuncs.com/202308101447860.png)
 
 ## 总结
 
 这一节的内容就到此结束了，自定义业务节点的样式、形状和外观都搞定了吗？尤其是外观的自定义需要渲染 `SVG` 标签，所以掌握一些 `SVG` 相关的数据或掌握使用工具的生成 `SVG` 数据还是很有必要的，感觉把这一节的代码熟悉熟悉，接着要对 LF中的 `Edge` 进行自定义了。
-
-<Comment />
