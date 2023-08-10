@@ -167,10 +167,8 @@ lf.value.on('custom:event', (r) => {
 });
 ```
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/62c12dc8a3de415cab55ea547c3e08ae~tplv-k3u1fbpfcp-zoom-1.image)
+![img](https://picgo-2022.oss-cn-beijing.aliyuncs.com/202308101456275.png)
 
 ## 总结
 
 这一节的内容就到此结束了，代码量相对校多，很多配置也依赖前面几节的学习，还有对于自定义Edge的添加菜单也是类似的操作，到此内置插件的使用就到此告一段落了，接着还有最后一个小节，就是要自定义插件，自定义插件将更有益于代码的复用，期待一下吧~
-
-<Comment />
