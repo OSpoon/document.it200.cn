@@ -1,6 +1,6 @@
 > tsup 是一个基于 ESBuild 实现在零配置的情况下快速捆绑 Typescript 模块的项目，在构建 CLI类 项目时可以优先考虑采用。
 
-![完整大纲](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/18ab5c6814a3455eb541e6a4fd794679~tplv-k3u1fbpfcp-zoom-1.image)
+![完整大纲](https://picgo-2022.oss-cn-beijing.aliyuncs.com/202308101429193.png)
 
 在这一节中你将了解到 tsup 如何压缩代码、如何代码拆分、如何做 tree shaking、捆绑的格式有哪些以及配置目标环境，内容较多，请各位小伙伴准备好，马上要开始了~ 
 

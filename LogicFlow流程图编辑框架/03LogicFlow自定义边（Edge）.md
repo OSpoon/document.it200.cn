@@ -32,8 +32,10 @@ export default {
 ### 2.1 注册自定义 Edge：
 
 注册过程依旧是两个步骤：
-- 第一要将上面编写的 `CustomEdge.ts` 导入到 `App.vue`；
-- 第二要将 `CustomEdge` 对象通过 lf 实例中的 `register()` 函数在 `render()` 前注册；
+
+第一要将上面编写的 `CustomEdge.ts` 导入到 `App.vue`；
+
+第二要将 `CustomEdge` 对象通过 lf 实例中的 `register()` 函数在 `render()` 前注册；
 
 ```typescript
 // 导入自定义 Edge
@@ -116,7 +118,7 @@ class CustomEdgeModel extends PolylineEdgeModel {
 
 当你完成了上面几个函数的重写后就得到的下面截图的效果：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ade23075144c42f6b5aefac8c2420673~tplv-k3u1fbpfcp-zoom-1.image)
+![img](https://picgo-2022.oss-cn-beijing.aliyuncs.com/202308101450255.png)
 
 ## 4. 开启边（Edge）动画：
 
@@ -124,8 +126,8 @@ class CustomEdgeModel extends PolylineEdgeModel {
 
 在LF中可以通过 `lf.openEdgeAnimation(edgeId)` 启动默认动画，也可以通过重写 `getEdgeAnimationStyle()` 函数来自定义动画的属性；
 
-- 开启默认动画：为需要开启动画的 `Edge` 增加 `id` 字段，并在执行渲染函数 `render()` 后开启动画：
-  
+开启默认动画：为需要开启动画的 `Edge` 增加 `id` 字段，并在执行渲染函数 `render()` 后开启动画：
+
 ```typescript
 const graphData = {
   edges: [
@@ -146,7 +148,7 @@ onMounted(() => {
 })
 ```
 
-- 自定义动画属性：重写 `getEdgeAnimationStyle()` 函数设置动画属性，重写 `setAttributes()` 函数开启动画：
+自定义动画属性：重写 `getEdgeAnimationStyle()` 函数设置动画属性，重写 `setAttributes()` 函数开启动画：
 
 ```typescript
 class CustomEdgeModel extends PolylineEdgeModel {
@@ -171,19 +173,22 @@ class CustomEdgeModel extends PolylineEdgeModel {
 
 默认 `Edge` 的类型可以在实例化 LF 时通过 `edgeType` 选项进行调整，也可以使用 `lf.setDefaultEdgeType(edgeType)` 函数来指定；除此之外，为了满足不同的业务节点使用不同类型的边来表示还可以通过实例化LF时通过设置 `edgeGenerator` 函数进行显示规则的定义。
 
-- 通过函数设置默认类型：
+通过函数设置默认类型：
+
 ```typescript
 lf.value.setDefaultEdgeType("CustomEdge");
 ```
 
-- 通过选项设置默认类型：
+通过选项设置默认类型：
+
 ```typescript
 lf.value = new LogicFlow({
   edgeType: "CustomEdge",
 })
 ```
 
-- 按同节点类型设置不同的类型：
+按同节点类型设置不同的类型：
+
 ```typescript
 lf.value = new LogicFlow({
   edgeGenerator(sourceNode, targetNode, currentEdge?) {
@@ -196,7 +201,8 @@ lf.value = new LogicFlow({
 
 通过 `setTheme()` 函数中提供的 `arrow` 选项，可以指定默认 `Edge` 箭头的风格；也可以在继承 `PolylineEdge` 后通过重写`getEndArrow()` 函数来实现更多显示风格。
 
-- 通过 `setTheme()` 函数设置剪头的风格：
+通过 `setTheme()` 函数设置剪头的风格：
+
 ```typescript
 f.value.setTheme({
   arrow: {
@@ -206,7 +212,8 @@ f.value.setTheme({
 })
 ```
 
-- 通过重写 `getEndArrow()` 函数，按 `properties` 传递的类型来实现不同的效果：
+通过重写 `getEndArrow()` 函数，按 `properties` 传递的类型来实现不同的效果：
+
 ```typescript
 class CustomEdgeNode extends PolylineEdge {
     getEndArrow() {
@@ -236,5 +243,3 @@ class CustomEdgeNode extends PolylineEdge {
 ## 总结
 
 这一节的内容就到此结束了，你的代码都运行起来了吗，文中缺少了一些运行的效果图，你可以直接访问我在[1024code](https://1024code.com/codecubes/FkuC19u)的项目在线预览效果来与你的代码进行对比学习。下一节将带来 LF 使用时更多的配置选项介绍。
-
-<Comment />

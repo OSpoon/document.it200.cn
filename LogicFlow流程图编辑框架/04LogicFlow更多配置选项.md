@@ -7,6 +7,7 @@
 LF设置主题时提供了两种方式的实现，分别是在实例化LF对象时通过 `style` 选项进行配置，另一种方式是在实例化LF对象后使用内置的 `lf.setTheme({})` 函数进行配置
 
 设置主题的常用属性列表（完整的选项列表参见[ThemeApi](http://logic-flow.org/api/themeApi.html)）：
+
 | 属性名	| 说明 |
 | ----- | ---- |
 | stroke	| 属性定义了给定图形元素的外轮廓的颜色 |
@@ -17,7 +18,10 @@ LF设置主题时提供了两种方式的实现，分别是在实例化LF对象�
 | font-size	| 属性定义文本字体大小 |
 | color	| 属性定义文本颜色 |
 
-- 实例化LF时配置：
+
+
+实例化LF时配置：
+
 ```typescript
 const styleConfig = {} // 主题配置项
 
@@ -29,14 +33,15 @@ lf.value = new LogicFlow({
 })
 ```
 
-- 实例化LF后配置：
+实例化LF后配置：
+
 ```typescript
 const styleConfig = {} // 主题配置项
 
 lf.value.setTheme(styleConfig);
 ```
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/72b756308bc54e85bf2a44e5577fc3aa~tplv-k3u1fbpfcp-zoom-1.image)
+![img](https://picgo-2022.oss-cn-beijing.aliyuncs.com/202308101452141.png)
 
 PS：节点的 `width`、`height`、`r` 等类似属性统一归类为形状属性，因其会对锚点位置、连线计算产生影响，顾不能通过主题进行设置，仅支持在自定义时调整。
 
@@ -60,7 +65,7 @@ lf.value = new LogicFlow({
   grid: gridConfig,
 })
 ```
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4cd81718e0c04c88bd615376384c00c9~tplv-k3u1fbpfcp-zoom-1.image)
+![img](https://picgo-2022.oss-cn-beijing.aliyuncs.com/202308101452449.png)
 
 ## 3. 设置对齐线 Snapline：
 
@@ -76,7 +81,7 @@ const styleConfig = {
 
 lf.value.setTheme(styleConfig);
 ```
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/940225a839524fd2a50400869a97ca08~tplv-k3u1fbpfcp-zoom-1.image)
+![img](https://picgo-2022.oss-cn-beijing.aliyuncs.com/202308101452524.png)
 
 ## 4. 设置背景 Background：
 
@@ -92,13 +97,13 @@ lf.value = new LogicFlow({
   }
 })
 ```
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ec2ceb686e594a69bde0e10a3c011ba0~tplv-k3u1fbpfcp-zoom-1.image)
+![img](https://picgo-2022.oss-cn-beijing.aliyuncs.com/202308101453359.png)
 
 ## 5. 设置键盘快捷键 Keyboard：
 
 快捷键在流程图产品中也是比不可少的一块功能，可以大大方便使用者的体验，在LF中默认关闭了快捷键的使用，可以在实例化LF时通过启用`enabled`选项来支持；LF除内置的快捷键外也支持自定义来扩展快捷键的使用；
 
-- 内置快捷键
+内置快捷键
 
 | 快捷键	|  功能  |
 | ----- | ----- |
@@ -108,7 +113,8 @@ lf.value = new LogicFlow({
 | cmd + y 或 ctrl + y	| 回退操作
 | backspace	          | 删除操作
 
-- 启用快捷键
+启用快捷键
+
 ```typescript
 lf.value = new LogicFlow({
   container: container.value,
@@ -118,7 +124,8 @@ lf.value = new LogicFlow({
 })
 ```
 
-- 自定义快捷键：快捷键keys的定义规则同`mousetrap`；下面使用官网的示例来演示自义定删除节点的快捷键触发时增加二次确认的提醒；
+自定义快捷键：快捷键keys的定义规则同`mousetrap`；下面使用官网的示例来演示自义定删除节点的快捷键触发时增加二次确认的提醒；
+
 ```typescript
 lf.value = new LogicFlow({
   container: container.value,
@@ -141,7 +148,7 @@ lf.value = new LogicFlow({
   },
 })
 ```
-	
+
 ## 6. 设置图编辑方式：
 
 LF提供了更多方便控制图编辑方式的选项，同样是可以在实例化LF时通过选项初始化，也支持实例化LF后通过`lf.updateEditConfig`函数进行调整；
@@ -155,7 +162,8 @@ LF提供了更多方便控制图编辑方式的选项，同样是可以在实例
 | stopScrollGraph	| false	| 禁止鼠标滚动移动画布   |
 | stopMoveGraph	  | false	| 禁止拖动画布          |
 
-- 如下启用了只读的静默模式、禁止缩放、禁止鼠标滚动移动画布、禁止拖动画布：
+如下启用了只读的静默模式、禁止缩放、禁止鼠标滚动移动画布、禁止拖动画布：
+
 ```typescript
 lf.value = new LogicFlow({
   container: container.value,
@@ -166,7 +174,8 @@ lf.value = new LogicFlow({
 })
 ```
 
-- 通过`lf.updateEditConfig`更灵活的调整：
+通过`lf.updateEditConfig`更灵活的调整：
+
 ```typescript
 lf.value.updateEditConfig({
 	isSilentMode: false
@@ -176,5 +185,3 @@ lf.value.updateEditConfig({
 ## 总结
 
 这一节的内容就到此结束了，现在对主题、网格、对齐线、背景、快捷键和图编辑方式都了解了吗？这些选项并非是必须的，但是在需要的时候要知道怎么配置，下一节开始要着手准备插件部分的学习了，加油~
-
-<Comment />

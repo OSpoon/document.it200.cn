@@ -62,7 +62,7 @@ lf.value.render();
 
 数据配置成功后就可以看到页面左侧的拖拽面板了，在你的项目中试一下吧~
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/05fc4353aaca45c580d1abb87bc71316~tplv-k3u1fbpfcp-zoom-1.image)
+![img](https://picgo-2022.oss-cn-beijing.aliyuncs.com/202308101455313.png)
 
 ## 3. 框选插件的配置&使用：
 
@@ -118,7 +118,7 @@ const patternItems = [{
 
 成功配置后就可以点击选区后去选中几个拖拽好的节点了~
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b02f15de87e541f49ace11840ba37387~tplv-k3u1fbpfcp-zoom-1.image)
+![img](https://picgo-2022.oss-cn-beijing.aliyuncs.com/202308101455208.png)
 
 ## 4. 分组插件的配置&使用：
 
@@ -149,7 +149,8 @@ const graphData = {
 
 ### 4.2 自定义分组：
 
-- 准备自定义分组的模板：
+准备自定义分组的模板：
+
 ```typescript
 import { GroupNode } from "@logicflow/extension";
 
@@ -164,7 +165,7 @@ export default {
 };
 ```
 
-- 优先注册&使用：
+优先注册&使用：
 
 ```typescript
 // 导入模块
@@ -187,7 +188,8 @@ const graphData = {
 }
 ```
 
-- 自定义样式：
+自定义样式：
+
 > 重写`getNodeStyle`函数
 ```typescript
 getNodeStyle() {
@@ -198,7 +200,8 @@ getNodeStyle() {
 }
 ```
 
-- 自定义形状：
+自定义形状：
+
 > 重写`initNodeData`函数
 ```typescript
 initNodeData(data: any) {
@@ -210,7 +213,8 @@ initNodeData(data: any) {
 }
 ```
 
-- 更多的状态：
+更多的状态：
+
 > groupModel除节点通用的属性外，还有下面这些状态属性的支持，建议在setAttributes函数配置；
 ```typescript
 setAttributes(): void {
@@ -235,5 +239,3 @@ setAttributes(): void {
 ## 总结
 
 这一节的内容就到此结束了，本节中的三个插件都是非常实用的功能，在实际业务中也需要做更多的功能扩展，所有内置的插件使用和自定义是很有必要掌握的，下一节准备了内置插件中一个比较重要的的插件**菜单**，没有成功运行的小伙伴要赶紧调试代码了~
-
-<Comment />

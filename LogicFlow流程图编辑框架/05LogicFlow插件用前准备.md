@@ -12,13 +12,15 @@ npm i @logicflow/extension
 ## 2. 注册插件到全局或实例
 插件的注册分为两种，分别是**注册到全局**和**注册到实例**，这个就需要按你业务的实际需要来设置了：
 
-- 注册到全局：将如下的代码安装到 `Vue` 的 `main.ts` 入口文件中即可
+注册到全局：将如下的代码安装到 `Vue` 的 `main.ts` 入口文件中即可
+
 ```typescript
 import { BpmnElement } from '@logicflow/extension';
 LogicFlow.use(BpmnElement);
 ```
 
-- 注册到实例：将扩展包在LF对象实例化后，将需要用到的插件通过 `plugins` 注册
+注册到实例：将扩展包在LF对象实例化后，将需要用到的插件通过 `plugins` 注册
+
 ```typescript
 import LogicFlow from "@logicflow/core";
 import { DndPanel, SelectionSelect, Group } from "@logicflow/extension";
@@ -35,5 +37,3 @@ const lf = new LogicFlow({
 ## 总结
 
 这一节的内容就到此结束了，本小节内容简单，主要是为了提供一份可以为后续内置插件和自定义插件的使用提供一份可以**fork**的代码仓库，本节源码将使用注册到实例的方式操作，搞定后就马上要开始插件部分的学习了~
-
-<Comment />
