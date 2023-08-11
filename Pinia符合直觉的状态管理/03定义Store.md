@@ -39,14 +39,19 @@ export const useCounterStore = defineStore('counter', {
 `setup` 函数配置示例：
 
 ```typescript
+import { defineStore } from 'pinia';
+import { ref, computed } from 'vue';
+
 export const useCounterStore = defineStore('counter', () => {
-  const count = ref(0);
+  const count = ref<number>(0);
+
+  const double = computed(() => count.value * 2);
 
   function increment() {
     count.value++;
   }
 
-  return { count, increment }
+  return { count, double, increment }
 });
 ```
 
