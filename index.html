@@ -37,12 +37,33 @@
       margin: 0;
     }
 
-    .sidebar .search .input-wrap {
-      align-items: center;
+    .sidebar {
+      padding: 0 !important;
+      overflow: hidden;
     }
 
-    .avatar {
+    .sidebar .sidebar-nav {
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 0 25px !important;
+      margin: 0;
+      margin-bottom: 160px;
+    }
+
+    .sidebar .sidebar-nav p {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .sidebar .app-name {
+      font-weight: bold;
+    }
+
+    .sidebar .app-name .app-name-link img {
+      width: 128px;
       border-radius: 50%;
+      border: 2px solid;
+      box-shadow: 1px 1px 3px 0px;
     }
   </style>
 </head>
@@ -51,7 +72,7 @@
   <script>
     window.$docsify = {
       name: '开发教程集合',
-      // logo: '/_media/icon.svg',
+      // logo: 'https://avatars.githubusercontent.com/u/10126623',
       repo: 'https://github.com/OSpoon',
       // 侧边栏
       loadSidebar: true,
@@ -71,14 +92,6 @@
         crossChapter: true,
         crossChapterText: true,
       },
-      search: {
-        maxAge: 86400000,
-        paths: 'auto',
-        placeholder: '搜索',
-        noData: '找不到结果',
-        depth: 3,
-        hideOtherSidebarContent: true,
-      },
       ga: 'G-H58HMS7BCB',
     }
   </script>
@@ -91,7 +104,6 @@
   <script src="./scripts/docsify-markmap.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-typescript.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
