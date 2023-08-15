@@ -9,8 +9,10 @@
         container.textContent = code; // Set the content of the container to the code
         codeBlock.parentNode.replaceChild(container, codeBlock);
   
-        // Render markmap in the container
-        // window.markmap.autoLoader.render(container);
+        if (window.markmap.Transformer) {
+          // Render markmap in the container
+          window.markmap.autoLoader.render(container);
+        }
       });
     }
   
