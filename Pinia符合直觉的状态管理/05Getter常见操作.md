@@ -60,6 +60,3 @@ const userStore = useUserStore();
 	<p>transform：{{ userStore.transform(NameStyle.LowerCase) }}</p>
 </template>
 ```
-
-## 访问其他的 Store 的 Getter
-
