@@ -64,6 +64,15 @@
       border: 2px solid;
       box-shadow: 1px 1px 3px 0px;
     }
+
+    body > nav > ul > li > ul > li > a {
+      min-width: 100px;
+    }
+
+    body > nav > ul > li:nth-child(4) > ul > li {
+      width: 200px;
+      height: 230px;
+    }
   </style>
 </head>
 <body>
@@ -71,10 +80,11 @@
   <script>
     window.$docsify = {
       name: '开发教程集合',
-      // logo: 'https://avatars.githubusercontent.com/u/10126623',
+      logo: 'https://avatars.githubusercontent.com/u/10126623',
       repo: 'https://github.com/OSpoon',
       // 侧边栏
       loadSidebar: true,
+      loadNavbar: true,
       // 目录等级
       subMaxLevel: 3,
       // 封面
